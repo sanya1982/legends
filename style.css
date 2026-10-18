@@ -1,0 +1,76 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+  margin: 0;
+}
+
+ol[role="list"],
+ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+html {
+  font-family: "Jost", sans-serif;
+}
+
+.main {
+  background: url('img/bg.jpg') center center / cover no-repeat;
+  min-height: 100vh;
+  padding: 61px 28px 0 28px;
+}
+
+.header {
+  margin: 0 auto;
+  border-radius: 100px;
+  width: 602px;
+  height: 50px;
+  background: rgba(238, 238, 242, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__text {
+  font-weight: 600;
+  font-size: 34px;
+  letter-spacing: 0.24em;
+  color: #910926;
+}
+
+.legends__items {
+  margin-top: 144px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.legends__item {
+  width: 234px;
+  height: 464px;
+}
+
+img {
+  width: 100%;
+}
