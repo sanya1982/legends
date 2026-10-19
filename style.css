@@ -33,6 +33,9 @@ img {
 html {
 	font-family: "Jost", sans-serif;
 }
+body {
+	position: relative;
+}
 
 .main {
 	background: url('img/bg.jpg') center center / cover no-repeat;
@@ -88,6 +91,7 @@ img {
 	opacity: 0;
 	transform: scale(0.95);
 	transition: opacity 0.3s ease, transform 0.3s ease, z-index 0s;;
+	overflow: hidden;
 }
 
 .video__content {
@@ -103,4 +107,42 @@ height: 500px;
 	z-index: 3;
 	opacity: 1;
 	transform: scale(1);
+}
+
+.info-sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* width: 350px; */
+	width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);; /* Полупрозрачный темный фон */
+  backdrop-filter: blur(10px); /* Красивое размытие видео под блоком */
+  z-index: 2; /* Находится ПОВЕРХ видео */
+  
+  /* Исходное положение: полностью спрятан за правым краем */
+  transform: translateX(100%);
+  
+  /* Настройка плавности и крутой инерции движения */
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* ЭФФЕКТ НЕРЕЗКИХ КРАЕВ: Левый край блока плавно растворяется */
+  mask-image: linear-gradient(to right, transparent 0%, black 15%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%);
+}
+
+.info-sidebar.active {
+  transform: translateX(0); /* Блок выезжает на экран */
+}
+
+.sidebar-content {
+  padding: 40px 30px;
+}
+.close-btn {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-top: 20px;
 }
