@@ -82,10 +82,10 @@ img {
 
 .video__bg {
 	position: absolute;
-	max-height: 100vh;
+	height: 100vh;
 	width: 100%;
 	z-index: 1;
-	background: rgba(255, 255, 255, 0.7);
+	background: rgba(255, 255, 255, 0.8);
 	top: 0px;
 	left: 0px;
 	opacity: 0;
@@ -116,27 +116,22 @@ height: 500px;
   /* width: 350px; */
 	width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.7);; /* Полупрозрачный темный фон */
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px); /* Красивое размытие видео под блоком */
-  z-index: 2; /* Находится ПОВЕРХ видео */
+  z-index: 2;
   
-  /* Исходное положение: полностью спрятан за правым краем */
   transform: translateX(100%);
   
-  /* Настройка плавности и крутой инерции движения */
   transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-
-  /* ЭФФЕКТ НЕРЕЗКИХ КРАЕВ: Левый край блока плавно растворяется */
-  mask-image: linear-gradient(to right, transparent 0%, black 15%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%);
 }
 
 .info-sidebar.active {
-  transform: translateX(0); /* Блок выезжает на экран */
+  transform: translateX(0);
 }
 
 .sidebar-content {
-  padding: 40px 30px;
+  /* padding: 40px 30px; */
+	padding: 40px 0;
 }
 .close-btn {
   background: none;
