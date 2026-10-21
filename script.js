@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	let touchStartX = 0;
 	let touchEndX = 0;
-	const videoDb = ['video/ex.mp4', 'video/garvey.mp4', 'video/ex.mp4', 'video/ex.mp4', 'video/fuster.mp4'];
+	const videoDb = ['video/hypo.mp4', 'video/garvey.mp4', 'video/geberden.mp4', 'video/riva.mp4', 'video/fuster.mp4'];
 	const promoDB = ['promo/prod.jpg', 'promo/nol.jpg', 'promo/prod.jpg', 'promo/nol.jpg', 'promo/prod.jpg'];
 
 	
